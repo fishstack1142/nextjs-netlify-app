@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <div>
-        <h6>version 15.14</h6>
+        <h6>version 17.04</h6>
         <ul>
           <li>
             <Link href="/b" as="/a">
