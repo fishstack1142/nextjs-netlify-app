@@ -69,6 +69,17 @@ run().catch(console.dir);
     return app.render(req, res, '/b', req.query)
   })
 
+  server.get('/api', (req, res) => {
+
+
+      return res.json({
+        body: req.body,
+        query: req.query,
+        cookies: req.cookies
+      })
+
+  })
+
   server.all('*', (req, res) => {
     return handle(req, res)
   })
