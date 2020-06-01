@@ -7,9 +7,11 @@ export default function Home({ myDoc }) {
   console.log('myDoc index page');
   console.log(myDoc);
 
+
+
   return (
     <div>
-        <h6>version 17.04</h6>
+        <h6>version 21.09</h6>
         <h3>{myDoc}</h3>
         <ul>
           <li>
@@ -37,7 +39,7 @@ export async function getServerSideProps() {
   console.log(url);
 
 
-const client = new MongoClient(url);
+const client = new MongoClient(url, {useUnifiedTopology: true});
  
  // The database to use
  const dbName = 'test4';
@@ -69,7 +71,7 @@ const client = new MongoClient(url);
        console.log('myDoc is is ');
        console.log(myDoc);
        console.log(myDoc.name.last);
-       myDoc = myDoc.name.last
+      //  myDoc = myDoc.name.last
        console.log(typeof myDoc);
 
       } catch (err) {
@@ -82,7 +84,7 @@ const client = new MongoClient(url);
 
   console.log(myDoc);
 
-  return myDoc
+  return JSON.stringify(myDoc)
 }
 
 run().catch(console.dir);
