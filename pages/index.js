@@ -40,7 +40,7 @@ export async function getServerSideProps() {
 const client = new MongoClient(url);
  
  // The database to use
- const dbName = 'test4'`;
+ const dbName = 'test4';
 
  var myDoc = 'man';             
  async function run() {
