@@ -35,10 +35,10 @@ const client = new MongoClient(url);
 
          // Construct a document                                                                                                                                                              
          let personDocument = {
-             "name": { "first": "Ellen", "last": "Touring" },
-             "birth": new Date(1912, 5, 23), // June 23, 1912                                                                                                                                 
-             "death": new Date(1954, 5, 7),  // June 7, 1954                                                                                                                                  
-             "contribs": [ "Turing machine", "Turing test", "Turingery" ],
+             "name": { "first": "Peter", "last": "Sareewong" },
+             "birth": new Date(1969, 5, 23), // June 23, 1912                                                                                                                                 
+             "death": new Date(1970, 5, 7),  // June 7, 1954                                                                                                                                  
+             "contribs": [ "Computers", "PDA", "Books" ],
              "views": 1250000
          }
 
